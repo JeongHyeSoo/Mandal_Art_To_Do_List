@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>만다라트</title>
+        <style>
+        </style>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var contents = new Array();
+            var dayArr = new Array();
+            var lank = new Array();
+            var todayArr = new Array();
+
+            for(var i=1;i<=81;i++){
+                contents[i]=0;
+            }
+
+            for(var j=0;j<567;j++){
+                dayArr[j]=0;
+            }
+
+            for(var k=1;k<=81;k++){
+                lank[k]=0;
+            }
+
+            // 만다라트 입력
+            contents[11]="건강";
+            contents[2]="운동하기";
+            dayArr[7*(2-1)+2]=1;//2번째 항목은 화요일에 수행(수행=1)
+            lank[2]=4;//순위영역 1=습관영역,2=업무영역,3=공부영역,4=취미영역
+
+            contents[3]="물 2L마시기";
+            dayArr[7*(3-1)+0]=1;//3번째 항목, 일요일
+            lank[3]=1;
+
+            contents[10]="비타민 먹기";
+            dayArr[7*(10-1)+1]=1;//10번째 항목, 월요일
+            lank[10]=1;
+
+            contents[11]="12시 이전 취침";
+            dayArr[7*(11-1)+6]=1;//11번째 항목, 토요일
+            lank[11]=1;
+
+            // 오늘 할 일 탐색
+            var d=new Date();
+            var today = d.getDay();
+            var count=0;
+            
+            for(var num=1;num<=81;num++)
+            {
+                if(dayArr[7*(num-1)+today]==1)
+                {
+                    todayArr[count]=7*(num-1)+today;//num는 칸번호, today는 요일
+                    count++
+                }
+            
+            }
+
+            //오늘 할 일 출력
+            
+            document.write("<table>");
+            for (var lankNum=1;lankNum<=4;lankNum++)
+            {
+                for(var l=0;l<count;l++)
+                {
+                    if(lank[(todayArr[l]-(todayArr[l]-7*parseInt(todayArr[l]/7)))/7+1]==lankNum)
+                    //todayArr[l]-7*parseInt(todayArr[l]/7)은 요일넘버
+                    //(todayArr[l]-(todayArr[l]-7*parseInt(todayArr[l]/7)))/7+1은 칸번호 
+                    {
+                        document.write("<tr>");
+                        document.write("<td bgcolor=green>"+contents[(todayArr[l]-(todayArr[l]-7*parseInt(todayArr[l]/7)))/7+1]);
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
