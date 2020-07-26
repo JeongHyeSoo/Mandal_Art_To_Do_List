@@ -1,0 +1,19 @@
+#MandalArt{
+    margin-left : 5%;
+    margin-right : 5%;
+    width:50%;
+    float: left;
+    text-align: center;
+}
+.box{
+    width :30%;
+    padding-bottom: 30%;
+    float: left;
+    border-style: solid;
+}
+
+#ToDoList{
+    width:35%;
+    margin-right : 5%;
+    float: right;
+}
