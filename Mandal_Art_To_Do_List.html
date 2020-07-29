@@ -11,8 +11,8 @@
     <article>
         <script type="text/javascript" src="Mandal_Art_CONTENTS.js"></script>
         <section id="MandalArt">
-            <h4>만다라트</h4>
-                <div class="box" id="box5">5</div>
+            <h2>만다라트</h2>
+                <div class="box" id="box5" >5</div>
                 <div class="box" id="box14">14</div>
                 <div class="box" id="box23">23</div>
                 <div class="box" id="box32">32</div>
@@ -22,43 +22,71 @@
                 <div class="box" id="box68">68</div>
                 <div class="box" id="box77">77</div>
             
+                <script type="text/javascript">
+                
+                    var what = document.getElementById('box5');
+                    what.onclick=click;
+                
+                    function click(a)
+                    {
+                        var target = document.getElementById("box41");
+                        var targetTop = target.getBoundingClientRect().top;
+                        var targetBottom = target.getBoundingClientRect().bottom;
+                        var targetLeft = target.getBoundingClientRect().left;
+                        var targetRight = target.getBoundingClientRect().right;
+
+                        var some = document.getElementById("box41");
+                        var someTop = some.getBoundingClientRect().top;
+                        var someBottom = some.getBoundingClientRect().bottom;
+                        var someLeft = some.getBoundingClientRect().left;
+                        var someRight = some.getBoundingClientRect().right;
+
+                        document.getElementById('box5').style.transform="translate(100px,100px)";
+                        document.getElementById('box5').style.zIndex="9999";
+                    }
+    
+                </script>
+
         </section>
         <section id="ToDoList">
-            <h4>To Do List</h4>
-            <script type="text/javascript">
+            <h2>To Do List</h2>
+            <div>
+                <script type="text/javascript">
 
-                // 오늘 할 일 탐색
-                var d=new Date();
-                var today = d.getDay();
-                var count=0;
-                
-                for(var num=1;num<=81;num++)
-                {
-                    if(dayArr[7*(num-1)+today]==1)
+                    // 오늘 할 일 탐색
+                    var d=new Date();
+                    var today = d.getDay();
+                    var count=0;
+                    
+                    for(var num=1;num<=81;num++)
                     {
-                        todayArr[count]=7*(num-1)+today;//num는 칸번호, today는 요일
-                        count++
-                    }
-                
-                }
-    
-                //오늘 할 일 출력
-                
-                document.write("<table>");
-                for (var lankNum=1;lankNum<=4;lankNum++)
-                {
-                    for(var l=0;l<count;l++)
-                    {
-                        if(lank[(todayArr[l]-(todayArr[l]-7*parseInt(todayArr[l]/7)))/7+1]==lankNum)
-                        //todayArr[l]-7*parseInt(todayArr[l]/7)은 요일넘버
-                        //(todayArr[l]-(todayArr[l]-7*parseInt(todayArr[l]/7)))/7+1은 칸번호 
+                        if(dayArr[7*(num-1)+today]==1)
                         {
-                            document.write("<tr>");
-                            document.write("<td bgcolor=green>"+contents[(todayArr[l]-(todayArr[l]-7*parseInt(todayArr[l]/7)))/7+1]);
+                            todayArr[count]=7*(num-1)+today;//num는 칸번호, today는 요일
+                            count++
+                        }
+                    
+                    }
+        
+                    //오늘 할 일 출력
+                    
+                    document.write("<table>");
+                    for (var lankNum=1;lankNum<=4;lankNum++)
+                    {
+                        for(var l=0;l<count;l++)
+                        {
+                            if(lank[(todayArr[l]-(todayArr[l]-7*parseInt(todayArr[l]/7)))/7+1]==lankNum)
+                            //todayArr[l]-7*parseInt(todayArr[l]/7)은 요일넘버
+                            //(todayArr[l]-(todayArr[l]-7*parseInt(todayArr[l]/7)))/7+1은 칸번호 
+                            {
+                                document.write("<tr>");
+                                document.write("<td bgcolor=green>"+contents[(todayArr[l]-(todayArr[l]-7*parseInt(todayArr[l]/7)))/7+1]);
+                            }
                         }
                     }
-                }
-            </script>
+                </script>
+            </div>
+            
         </section>
     </article>
     
