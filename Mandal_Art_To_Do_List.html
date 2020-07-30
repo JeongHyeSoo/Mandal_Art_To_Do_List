@@ -11,7 +11,7 @@
     <article>
         <script type="text/javascript" src="Mandal_Art_CONTENTS.js"></script>
         <section id="MandalArt">
-            <h2>만다라트</h2>
+            <h2>만다라트</h2><br><br>
                 <div class="box" id="box5" >5</div>
                 <div class="box" id="box14">14</div>
                 <div class="box" id="box23">23</div>
@@ -21,13 +21,14 @@
                 <div class="box" id="box59">59</div>
                 <div class="box" id="box68">68</div>
                 <div class="box" id="box77">77</div>
+                <div class="box" id="boxNew">newBox</div>
             
                 <script type="text/javascript">
                 
                     var what = document.getElementById('box5');
                     what.onclick=click;
                 
-                    function click(a)
+                    function click()
                     {
                         var target = document.getElementById("box41");
                         var targetTop = target.getBoundingClientRect().top;
@@ -43,13 +44,20 @@
 
                         document.getElementById('box5').style.transform="translate(100px,100px)";
                         document.getElementById('box5').style.zIndex="9999";
+
+
+                        var parent = document.getElementById("MandalArt");
+                        var child = document.getElementById("box14");
+                        parent.removeChild(child);
+
+
                     }
     
                 </script>
 
         </section>
         <section id="ToDoList">
-            <h2>To Do List</h2>
+            <h2>To Do List</h2><br><br>
             <div>
                 <script type="text/javascript">
 
