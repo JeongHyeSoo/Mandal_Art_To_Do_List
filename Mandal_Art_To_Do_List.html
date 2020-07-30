@@ -21,7 +21,6 @@
                 <div class="box" id="box59">59</div>
                 <div class="box" id="box68">68</div>
                 <div class="box" id="box77">77</div>
-                <div class="box" id="boxNew">newBox</div>
             
                 <script type="text/javascript">
                 
@@ -51,13 +50,10 @@
                         var child = document.getElementById("box14");
                         parent.removeChild(child);
 
-                        //새로운 box 생성
-                        var para = document.createElement("newbox");
-                        var node = document.createTextNode("This is new.");
-                        para.appendChild(node);
-
-                        var element = document.getElementById("div1");
-                        element.appendChild(para);
+                        //새로운 box 생성..가능? ㅠㅠ
+                        //var para = document.createElement("newbox");
+                        //var node = document.createTextNode("This is new.");
+                        //para.appendChild(node);
 
                     }
     
