@@ -36,7 +36,7 @@ var contents = new Array();
 
             
                 // 2번 큰 박스
-            contents[14]="건강";
+            contents[14]="냠냠";
 
 
                 

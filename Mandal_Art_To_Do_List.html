@@ -6,14 +6,14 @@
     </head>
     <body>
         <header>
-            <h1 style="text-align: center;">만다라트 브랜치 테스트</h1>
+            <h1 style="text-align: center;">만다라트</h1>
         </header>
     <article>
         <script type="text/javascript" src="Mandal_Art_CONTENTS.js"></script>
         <section id="MandalArt">
             <h2>만다라트</h2><br><br>
-                <div class="box" id="box5" >5</div>
-                <div class="box" id="box14">14</div>
+                <div class="box" id="box5" ><span id="num5">5</span></div>
+                <div class="box" id="box14"></div>
                 <div class="box" id="box23">23</div>
                 <div class="box" id="box32">32</div>
                 <div class="box" id="box41">41</div>
@@ -21,44 +21,48 @@
                 <div class="box" id="box59">59</div>
                 <div class="box" id="box68">68</div>
                 <div class="box" id="box77">77</div>
-                <div class="box" id="boxNew">newBox</div>
             
                 <script type="text/javascript">
-                
+                //두번째 방식(변수로) 해결되면 다시 클릭했을 때 원래대로 돌아올 수 있게 만들기!
+                 
+                    // 하나하나 바꾸기 : 성공..이지만 이렇게 만들고싶지 않다...진짜로..
+
                     var what = document.getElementById('box5');
-                    what.onclick=click;
+                    what.onclick=click5;
                 
-                    function click()
+                    function click5()
                     {
-                        var target = document.getElementById("box41");
-                        var targetTop = target.getBoundingClientRect().top;
-                        var targetBottom = target.getBoundingClientRect().bottom;
-                        var targetLeft = target.getBoundingClientRect().left;
-                        var targetRight = target.getBoundingClientRect().right;
 
-                        var some = document.getElementById("box41");
-                        var someTop = some.getBoundingClientRect().top;
-                        var someBottom = some.getBoundingClientRect().bottom;
-                        var someLeft = some.getBoundingClientRect().left;
-                        var someRight = some.getBoundingClientRect().right;
-
-                        //클릭한 div 이동
-                        document.getElementById('box5').style.transform="translate(100px,100px)";
-                        document.getElementById('box5').style.zIndex="9999";
-
-                        //나머지 box 삭제
-                        var parent = document.getElementById("MandalArt");
-                        var child = document.getElementById("box14");
+                        //box 내용 삭제
+                        var parent = document.getElementById("box5");
+                        var child = document.getElementById("num5");
                         parent.removeChild(child);
 
-                        //새로운 box 생성
-                        var para = document.createElement("newbox");
-                        var node = document.createTextNode("This is new.");
+                        //box 내용 생성
+                        var para = document.getElementById('box5');
+                        var node = document.createTextNode(contents[1]);
                         para.appendChild(node);
 
-                        var element = document.getElementById("div1");
-                        element.appendChild(para);
 
+                    }
+
+
+
+                    //변수로 바꾸기 : 시도 중 ..
+
+                    var what = document.getElementById('box14');
+                    what.onclick=click14;
+
+
+                        //box 내용 생성
+                    var para = document.getElementById('box14');
+                    var node = document.createTextNode(contents[14]);
+                    para.appendChild(node);
+
+                    
+                    function click14()
+                    {
+                        node=contents[11];
                     }
     
                 </script>
