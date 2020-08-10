@@ -10,9 +10,10 @@
         </header>
     <article>
         <script type="text/javascript" src="Mandal_Art_CONTENTS.js"></script>
-        <section id="MandalArt">
+        <section id="section1">
             <h2>만다라트</h2><br><br>
-                <div class="box" id="box5" >5</div>
+            <div id="MandalArt">
+                <div class="box" id="box5" ><span id="num5">5</span></div>
                 <div class="box" id="box14">14</div>
                 <div class="box" id="box23">23</div>
                 <div class="box" id="box32">32</div>
@@ -21,43 +22,35 @@
                 <div class="box" id="box59">59</div>
                 <div class="box" id="box68">68</div>
                 <div class="box" id="box77">77</div>
+            </div>    
             
+
+
                 <script type="text/javascript">
                 
-                    var what = document.getElementById('box5');
-                    what.onclick=click;
-                
-                    function click()
-                    {
-                        var target = document.getElementById("box41");
-                        var targetTop = target.getBoundingClientRect().top;
-                        var targetBottom = target.getBoundingClientRect().bottom;
-                        var targetLeft = target.getBoundingClientRect().left;
-                        var targetRight = target.getBoundingClientRect().right;
+            
+                        
+                        document.querySelector('#box5').onclick = function (e) 
+                        {
+                            var nav = document.querySelector('#box5');
+                            nav.classList.toggle('show');
+                            //box 내용 삭제
+                            var parent = document.getElementById("box5");
+                            var child = document.getElementById("num5");
+                            parent.removeChild(child);
 
-                        var some = document.getElementById("box41");
-                        var someTop = some.getBoundingClientRect().top;
-                        var someBottom = some.getBoundingClientRect().bottom;
-                        var someLeft = some.getBoundingClientRect().left;
-                        var someRight = some.getBoundingClientRect().right;
-
-                        //클릭한 div 이동
-                        document.getElementById('box5').style.transform="translate(100px,100px)";
-                        document.getElementById('box5').style.zIndex="9999";
-
-                        //나머지 box 삭제
-                        var parent = document.getElementById("MandalArt");
-                        var child = document.getElementById("box14");
-                        parent.removeChild(child);
-
-                        //새로운 box 생성..가능? ㅠㅠ
-                        //var para = document.createElement("newbox");
-                        //var node = document.createTextNode("This is new.");
-                        //para.appendChild(node);
-
-                    }
-    
+                            //box 내용 생성
+                            var para = document.getElementById('box5');
+                            var node = document.createTextNode(contents[1]);
+                            para.appendChild(node);
+                            e.preventDefault()
+                            {}
+                        }
+                        
                 </script>
+
+
+
 
         </section>
         <section id="ToDoList">
