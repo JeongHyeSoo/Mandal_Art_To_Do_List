@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>만다라트</title>
+        <meta charset="utf-8">
         <link rel="stylesheet" href="Mandal_Art_To_Do_List.css">
     </head>
     <body>
@@ -26,47 +27,50 @@
             
 
 
-                <script type="text/javascript">
-
-                    for(var i=0, k=0;i<9,k<9;i++,k++)
+            <script type="text/javascript">
+                //상위 내용물 출력
+                for(var i=0, k=0;i<9,k<9;i++,k++)
                     document.getElementsByClassName("con")[i].innerHTML=contents[9*k+5];
-
-                        document.querySelector('#box5').onclick = function (e) 
-                        {
-                            var click = document.querySelector('#box5');
-                            click.classList.toggle('show');
-                            var click = document.querySelector('#box14');
-                            click.classList.toggle('show');
-                            var click = document.querySelector('#box23');
-                            click.classList.toggle('show');
-                            var click = document.querySelector('#box32');
-                            click.classList.toggle('show');
-                            var click = document.querySelector('#box41');
-                            click.classList.toggle('show');
-                            var click = document.querySelector('#box50');
-                            click.classList.toggle('show');
-                            var click = document.querySelector('#box59');
-                            click.classList.toggle('show');
-                            var click = document.querySelector('#box68');
-                            click.classList.toggle('show');
-                            var click = document.querySelector('#box77');
-                            click.classList.toggle('show');
+                        
+                //클릭시 이벤트
+                document.querySelector('#box5').onclick = function (e) 
+                    {
+                        var click = document.querySelector('#box5');
+                        click.classList.toggle('show');
+                        var click = document.querySelector('#box14');
+                        click.classList.toggle('show');
+                        var click = document.querySelector('#box23');
+                        click.classList.toggle('show');
+                        var click = document.querySelector('#box32');
+                        click.classList.toggle('show');
+                        var click = document.querySelector('#box41');
+                        click.classList.toggle('show');
+                        var click = document.querySelector('#box50');
+                        click.classList.toggle('show');
+                        var click = document.querySelector('#box59');
+                        click.classList.toggle('show');
+                        var click = document.querySelector('#box68');
+                        click.classList.toggle('show');
+                        var click = document.querySelector('#box77');
+                        click.classList.toggle('show');
                             
                             
-                            for(var j=0, l=0;j<9,l<9;j++,l++)
-                            document.getElementsByClassName("con")[j].innerHTML=contents[l+1];
+                        for(var j=0, l=0;j<9,l<9;j++,l++)
+                        document.getElementsByClassName("con")[j].innerHTML=contents[l+1];
                             
-                            e.preventDefault()
-                            {}
-                        }
+                        e.preventDefault()
+                    }
                 </script>
 
 
         </section>
         <section id="section2">
-            <h2>To Do List</h2><br><br>
+            <h2 style="text-align: center">To Do List</h2><br><br>
             <div>
+                <table id="ToDoList">
                 <script type="text/javascript">
+                
+                    var todayArr = new Array();
 
                     // 오늘 할 일 탐색
                     var d=new Date();
@@ -84,8 +88,7 @@
                     }
         
                     //오늘 할 일 출력
-                    
-                    document.write("<table>");
+                   
                     for (var lankNum=1;lankNum<=4;lankNum++)
                     {
                         for(var l=0;l<count;l++)
@@ -100,6 +103,7 @@
                         }
                     }
                 </script>
+                </table>
             </div>
             
         </section>

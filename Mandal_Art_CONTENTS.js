@@ -1,11 +1,10 @@
 var contents = new Array();
 var dayArr = new Array();
 var lank = new Array();
-var todayArr = new Array();
 
 for(var i=1;i<=81;i++)
 {
-    contents[i]=0;
+    contents[i]=" ";
 }
 
 for(var j=0;j<567;j++)
@@ -21,13 +20,16 @@ for(var j=0;j<567;j++)
  // 만다라트 입력
  
     // 1번 큰 박스
- contents[5]="건강";
+contents[5]="건강";
+
 contents[2]="운동하기";
-dayArr[7*(2-1)+2]=1;//2번째 항목은 화요일에 수행(수행=1)
+for(var i=0;i<7;i++)
+dayArr[7*(2-1)+i]=1;//2번째 항목은 매일 수행(수행=1)
 lank[2]=4;//순위영역 1=습관영역,2=업무영역,3=공부영역,4=취미영역
 
 contents[3]="물 2L마시기";
-dayArr[7*(3-1)+0]=1;//3번째 항목, 일요일
+for(var i=0;i<7;i++)
+dayArr[7*(3-1)+i]=1;//3번째 항목, 매일
 lank[3]=1;
 
 contents[4]="비타민 먹기";
