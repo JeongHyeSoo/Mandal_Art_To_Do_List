@@ -7,7 +7,9 @@
 }
 .box{
     width :30%;
-    padding-bottom: 30%;
+    padding-top: 13%;
+    font-size : 25px;
+    padding-bottom: 13%;
     float: left;
     border-style: solid;
     background-color: white;
@@ -39,28 +41,45 @@
 }
 
 
-#ToDoList{
+#section2{
     width:30%;
     margin-right : 10%;
     float: right;
 }
 
 #box5.show{
-    background: rgb(182, 6, 6);
+    background: rgb(255, 182, 182);
     animation: translate5 0.7s forwards;
-    -webkit-transform: rotate(360deg);
-      -ms-transform: rotate(360deg);
-      -o-transform: rotate(360deg);
-      transform:  rotate(360deg);
 }
 #box14.show{
-    background: rgb(182, 6, 6);
+    background: rgb(255, 182, 182);
     animation: translate14 0.7s forwards;
 }
 #box23.show{
-    background: rgb(182, 6, 6);
+    background: rgb(255, 182, 182);
     animation: translate23 0.7s forwards;
 }
+#box32.show{
+  background: rgb(255, 182, 182);
+  animation: translate32 0.7s forwards;
+}
+#box50.show{
+  background: rgb(255, 182, 182);
+  animation: translate50 0.7s forwards;
+}
+#box59.show{
+  background: rgb(255, 182, 182);
+  animation: translate59 0.7s forwards;
+}
+#box68.show{
+  background: rgb(255, 182, 182);
+  animation: translate68 0.7s forwards;
+}
+#box77.show{
+  background: rgb(255, 182, 182);
+  animation: translate77 0.7s forwards;
+}
+
 
   @keyframes translate5
   {
@@ -98,5 +117,69 @@
       -ms-transform: translate(-100%,100%);
       -o-transform: translate(-100%,100%);
       transform:  translate(-100%,100%);
+    }
+  }
+
+  @keyframes translate32
+  {
+    0%,100%{
+    }
+  
+    50%{
+      -webkit-transform: translate(100%,0%);
+      -ms-transform: translate(100%,0%);
+      -o-transform: translate(100%,0%);
+      transform:  translate(100%,0%);
+    }
+  }
+
+  @keyframes translate50
+  {
+    0%,100%{
+    }
+  
+    50%{
+      -webkit-transform: translate(-100%,0%);
+      -ms-transform: translate(-100%,0%);
+      -o-transform: translate(-100%,0%);
+      transform:  translate(-100%,0%);
+    }
+  }
+
+  @keyframes translate59
+  {
+    0%,100%{
+    }
+  
+    50%{
+      -webkit-transform: translate(100%,-100%);
+      -ms-transform: translate(100%,-100%);
+      -o-transform: translate(100%,-100%);
+      transform:  translate(100%,-100%);
+    }
+  }
+  
+  @keyframes translate68
+  {
+    0%,100%{
+    }
+  
+    50%{
+      -webkit-transform: translate(0%,-100%);
+      -ms-transform: translate(0%,-100%);
+      -o-transform: translate(0%,-100%);
+      transform:  translate(0%,-100%);
+    }
+  }
+  @keyframes translate77
+  {
+    0%,100%{
+    }
+  
+    50%{
+      -webkit-transform: translate(-100%,-100%);
+      -ms-transform: translate(-100%,-100%);
+      -o-transform: translate(-100%,-100%);
+      transform:  translate(-100%,-100%);
     }
   }

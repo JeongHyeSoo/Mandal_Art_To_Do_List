@@ -40,39 +40,39 @@ lank[6]=1;
 
 
     // 2번 큰 박스
-contents[14]="건강";
+contents[14]="영어";
 
 
 
    // 3번 큰 박스
-contents[23]="건강";
+contents[23]="취미";
 
 
 
     // 4번 큰 박스
-contents[32]="건강";
+contents[32]="관계";
 
 
 
     // 5번 큰 박스
-contents[41]="건강";
+contents[41]="냠냠";
 
 
 
     // 6번 큰 박스
-contents[50]="건강";
+contents[50]="엉엉";
 
 
 
     // 7번 큰 박스
-contents[59]="건강";
+contents[59]="우왕";
 
 
 
     // 8번 큰 박스
-contents[68]="건강";
+contents[68]="히히";
 
 
 
     // 9번 큰 박스
-contents[77]="건강";
+contents[77]="음냐";

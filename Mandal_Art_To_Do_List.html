@@ -13,50 +13,59 @@
         <section id="section1">
             <h2>만다라트</h2><br><br>
             <div id="MandalArt">
-                <div class="box" id="box5" ><span id="num5">5</span></div>
-                <div class="box" id="box14">14</div>
-                <div class="box" id="box23">23</div>
-                <div class="box" id="box32">32</div>
-                <div class="box" id="box41">41</div>
-                <div class="box" id="box50">50</div>
-                <div class="box" id="box59">59</div>
-                <div class="box" id="box68">68</div>
-                <div class="box" id="box77">77</div>
+                <div class="box" id="box5" ><div class="con"></div></div>
+                <div class="box" id="box14"><div class="con"></div></div>
+                <div class="box" id="box23"><div class="con"></div></div>
+                <div class="box" id="box32"><div class="con"></div></div>
+                <div class="box" id="box41"><div class="con"></div></div>
+                <div class="box" id="box50"><div class="con"></div></div>
+                <div class="box" id="box59"><div class="con"></div></div>
+                <div class="box" id="box68"><div class="con"></div></div>
+                <div class="box" id="box77"><div class="con"></div></div>
             </div>    
             
 
 
                 <script type="text/javascript">
-                
+
+                    for(var i=0, k=0;i<9,k<9;i++,k++)
+                    document.getElementsByClassName("con")[i].innerHTML=contents[9*k+5];
+
                         document.querySelector('#box5').onclick = function (e) 
                         {
-                            var nav = document.querySelector('#box5');
-                            nav.classList.toggle('show');
-                            var nav = document.querySelector('#box14');
-                            nav.classList.toggle('show');
-                            var nav = document.querySelector('#box23');
-                            nav.classList.toggle('show');
+                            var click = document.querySelector('#box5');
+                            click.classList.toggle('show');
+                            var click = document.querySelector('#box14');
+                            click.classList.toggle('show');
+                            var click = document.querySelector('#box23');
+                            click.classList.toggle('show');
+                            var click = document.querySelector('#box32');
+                            click.classList.toggle('show');
+                            var click = document.querySelector('#box41');
+                            click.classList.toggle('show');
+                            var click = document.querySelector('#box50');
+                            click.classList.toggle('show');
+                            var click = document.querySelector('#box59');
+                            click.classList.toggle('show');
+                            var click = document.querySelector('#box68');
+                            click.classList.toggle('show');
+                            var click = document.querySelector('#box77');
+                            click.classList.toggle('show');
                             
-                            //box 내용 삭제
-                            var parent = document.getElementById("box5");
-                            var child = document.getElementById("num5");
-                            parent.removeChild(child);
-
-                            //box 내용 생성
-                            var para = document.getElementById('box5');
-                            var node = document.createTextNode(contents[1]);
-                            para.appendChild(node);
+                            
+                            for(var j=0, l=0;j<9,l<9;j++,l++)
+                            document.getElementsByClassName("con")[j].innerHTML=contents[l+1];
+                            
                             e.preventDefault()
                             {}
                         }
-
                 </script>
 
 
 
 
         </section>
-        <section id="ToDoList">
+        <section id="section2">
             <h2>To Do List</h2><br><br>
             <div>
                 <script type="text/javascript">
