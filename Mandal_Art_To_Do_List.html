@@ -69,7 +69,7 @@
             <div>
                 <table id="ToDoList">
                 <script type="text/javascript">
-                
+
                     var todayArr = new Array();
 
                     // 오늘 할 일 탐색
@@ -89,19 +89,44 @@
         
                     //오늘 할 일 출력
                    
-                    for (var lankNum=1;lankNum<=4;lankNum++)
+                    
+                    for(var l=0;l<count;l++)
                     {
-                        for(var l=0;l<count;l++)
+                        if(lank[(todayArr[l]-(todayArr[l]-7*parseInt(todayArr[l]/7)))/7+1]==1)
+                        //todayArr[l]-7*parseInt(todayArr[l]/7)은 요일넘버
+                        //(todayArr[l]-(todayArr[l]-7*parseInt(todayArr[l]/7)))/7+1은 칸번호 
                         {
-                            if(lank[(todayArr[l]-(todayArr[l]-7*parseInt(todayArr[l]/7)))/7+1]==lankNum)
-                            //todayArr[l]-7*parseInt(todayArr[l]/7)은 요일넘버
-                            //(todayArr[l]-(todayArr[l]-7*parseInt(todayArr[l]/7)))/7+1은 칸번호 
-                            {
-                                document.write("<tr>");
-                                document.write("<td bgcolor=green>"+contents[(todayArr[l]-(todayArr[l]-7*parseInt(todayArr[l]/7)))/7+1]);
-                            }
+                            document.write("<tr>");
+                            document.write("<td bgcolor=lightgreen>"+contents[(todayArr[l]-(todayArr[l]-7*parseInt(todayArr[l]/7)))/7+1]);
                         }
                     }
+                    for(var l=0;l<count;l++)
+                    {
+                        if(lank[(todayArr[l]-(todayArr[l]-7*parseInt(todayArr[l]/7)))/7+1]==2)
+                        {
+                            document.write("<tr>");
+                            document.write("<td bgcolor=blue>"+contents[(todayArr[l]-(todayArr[l]-7*parseInt(todayArr[l]/7)))/7+1]);
+                        }
+                    }
+                    for(var l=0;l<count;l++)
+                    {
+                        if(lank[(todayArr[l]-(todayArr[l]-7*parseInt(todayArr[l]/7)))/7+1]==3)
+                        {
+                            document.write("<tr>");
+                            document.write("<td bgcolor=yellow>"+contents[(todayArr[l]-(todayArr[l]-7*parseInt(todayArr[l]/7)))/7+1]);
+                        }
+                    }
+                    for(var l=0;l<count;l++)
+                    {
+                        if(lank[(todayArr[l]-(todayArr[l]-7*parseInt(todayArr[l]/7)))/7+1]==4)
+                        {
+                            document.write("<tr>");
+                            document.write("<td bgcolor=pink>"+contents[(todayArr[l]-(todayArr[l]-7*parseInt(todayArr[l]/7)))/7+1]);
+                        }
+                    }
+                    //탐색할 때부터 랭크에 따라 4개의 배열에 넣어서 for문에서 최소한으로 돌게 하는게 나을까
+                    //아니면 지금처럼 그냥 코드 줄 수가 짧은 게 나을까...ㅇㅅㅇ 하긴 근데 줄 수가 별 차이는 없구나..
+                    //다음 할 일 = 위에 거 판단, 체크리스트 생각해보기..표로 어떻게 접근할지 뭐 이런거
                 </script>
                 </table>
             </div>
