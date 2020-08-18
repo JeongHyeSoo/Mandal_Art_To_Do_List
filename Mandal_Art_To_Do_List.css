@@ -208,14 +208,23 @@
   }
 
   #lank1{
-    background-color:lightgreen;
+    background-color:rgb(206, 255, 183);
+    width:30px;
   } 
   #lank2{
     background-color:lightblue;
   }
   #lank3{
-    background-color:lightyellow;
+    background-color:rgb(255, 236, 149);
   }
   #lank4{
-    background-color:pink;
+    background-color:rgb(255, 203, 211);
+    width:30px;
+  }
+  input{
+    font-size: 15px;
+    height: 20px;
+  }
+  #ToDoList.memoplus{
+    margin-left:20px;
   }
